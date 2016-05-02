@@ -3,6 +3,8 @@ The **WorkQueue** and **MultiWorkQueue** classes provide static methods for easy
 
 **Note:** The spawned threads are *background* threads,  they won't block termination of the application and will exit with it. This also means that any unexecuted jobs will be discarded and the current job will be immediately terminated.
 
+The namespace for these classes is `MTX.Utilities.Concurrent`.
+
 
 ## WorkQueue
 Spins up a single worker thread, allowing jobs to be executed in sequence. Guarantees that jobs queued first will execute and finish before any jobs queued later.
