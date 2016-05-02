@@ -26,7 +26,7 @@ namespace MTX.Utilities.Concurrent
     public static class MultiWorkQueue
     {
         private static bool _initialized = false;
-        private static Dictionary<object, Thread> _thread;
+        private volatile static Dictionary<object, Thread> _thread;
         private volatile static Dictionary<object, AutoResetEvent> _signal;
         private volatile static ConcurrentDictionary<object, ConcurrentQueue<Tuple<Action<object>, object>>> _queue;
         private static readonly Object _lock = new Object();
