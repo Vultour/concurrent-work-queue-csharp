@@ -3,7 +3,7 @@ The **WorkQueue** and **MultiWorkQueue** classes provide static methods for easy
 
 
 ## WorkQueue
-Spins up a single worker thread, allowing jobs to be executed in sequence. Guarantees that jobs queued first will execute and finish before any jobs queued late.
+Spins up a single worker thread, allowing jobs to be executed in sequence. Guarantees that jobs queued first will execute and finish before any jobs queued later.
 
 Usage:
  - Call `WorkQueue.Initialize()` (e.g. in your application init)
